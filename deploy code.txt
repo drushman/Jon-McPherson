@@ -1,1 +1,35 @@
-1.setup module
+1.download and install third modules
+	- quicktabs at http://drupal.org/project/quicktabs
+	- add_outlook at https://github.com/tuongduy/add_outlook
+	
+2.Creat 2 quicktab
+	- node 65 : consists 4 block and only display this quicktabs oin node 65
+		+ All Events, 
+		+ Post event 
+		+ Seminars
+		+ Workshop
+	- node 68 : consists 4 block only display this quicktabs oin node 68
+		+ Newletters  
+        + Guides
+		+ Commeittee
+		+ Minutes
+3.Create new image style with name "photo_240_240" with effect scale and crop and size 240 x 240
+4.Config views
+	- View events block : 
+		+ change photo field to at top list and set image style to photo_240_240
+		+ add nid and check Exclude from display
+		+ Add custom test with text :
+									<ul class="menu-event">
+										<li><a class="register">Register for Event</a></li>
+										<li><a class="add" href="add-outlook/[nid]/addtocal.ics ">Add to outlook</a></li>
+										<li><a class="more" href="/events">More</a></li>
+									</ul>
+	- view post event 
+		+ change image field to at top list and set image style to photo_240_240
+	- view Seminars
+		+ change Seminar Photo field to at top list and set image style to photo_240_240
+	- view Workshop
+		+ change Workshop Photofield to at top list and set image style to photo_240_240
+	- view Newsletters, Guides, Commeittee, Minutes
+		+ change format from list to table
+	
